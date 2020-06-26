@@ -10,7 +10,7 @@
     height: auto;
     width: 100%;
     line-height: inherit;
-    padding: 1rem 2rem 1rem 4.5rem;
+    padding: 10px 20px 10px 45px;
     font-size: $default-font;
     color: $theme-color;
     border-color: rgba(127,136,151,0.2);
@@ -42,9 +42,9 @@
     }
     .input-icon {
       position: absolute;
-      top: 1.3rem;
-      left: 1.3rem;
-      font-size: $display-13;
+      top: 1rem;
+      left: 1rem;
+      font-size: $display-14;
     }
     .search-close-icon,
     .subscriber-btn,
@@ -63,7 +63,7 @@
     }
     .search-icon {
       color: $theme-color;
-      padding: 1.5rem;
+      padding: 0.7rem;
       top: 50%;
       @include transform(translateY(-50%) rotate(-90deg));
       cursor: pointer;

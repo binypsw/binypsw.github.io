@@ -194,7 +194,7 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 body {
-  font-size: 1.4rem;
+  font-size: 1.3rem;
   line-height: 1.7rem;
   font-family: "ThaiSansNeue", "Mukta", sans-serif;
   color: #7f8897;
@@ -275,7 +275,7 @@ body {
 }
 
 .bg-color-2 {
-  background-color: #3cf991 !important;
+  background-color: #2bab1c !important;
 }
 
 .bg-color-3 {
@@ -929,59 +929,59 @@ body {
 }
 
 .font-size-28 {
-  font-size: 2.8rem !important;
-}
-
-.font-size-27 {
-  font-size: 2.7rem !important;
-}
-
-.font-size-26 {
-  font-size: 2.6rem !important;
-}
-
-.font-size-25 {
   font-size: 2.5rem !important;
 }
 
-.font-size-24 {
+.font-size-27 {
   font-size: 2.4rem !important;
 }
 
-.font-size-23 {
+.font-size-26 {
   font-size: 2.3rem !important;
 }
 
-.font-size-22 {
+.font-size-25 {
   font-size: 2.2rem !important;
 }
 
-.font-size-21 {
+.font-size-24 {
   font-size: 2.1rem !important;
 }
 
-.font-size-20 {
+.font-size-23 {
   font-size: 2rem !important;
 }
 
-.font-size-19 {
+.font-size-22 {
   font-size: 1.9rem !important;
 }
 
-.font-size-18 {
+.font-size-21 {
   font-size: 1.8rem !important;
 }
 
-.font-size-17 {
+.font-size-20 {
   font-size: 1.7rem !important;
 }
 
-.font-size-16 {
+.font-size-19 {
   font-size: 1.6rem !important;
 }
 
-.font-size-15 {
+.font-size-18 {
   font-size: 1.5rem !important;
+}
+
+.font-size-17 {
+  font-size: 1.45rem !important;
+}
+
+.font-size-16 {
+  font-size: 1.4rem !important;
+}
+
+.font-size-15 {
+  font-size: 1.3rem !important;
 }
 
 .font-size-14 {
@@ -1125,7 +1125,7 @@ body {
 }
 
 .icon-element-bg-2 {
-  background-color: #3cf991 !important;
+  background-color: #2bab1c !important;
   color: #fff !important;
 }
 
@@ -1580,7 +1580,7 @@ body {
 
 .widget-title-tooltip i {
   margin-right: 5px;
-  font-size: 1.4rem;
+  font-size: 1.3rem;
 }
 
 .widget-title-tooltip:after {
@@ -1716,7 +1716,6 @@ body {
 }
 
 .sort-ordering .dropdown-toggle {
-  font-size: 1.4rem;
   padding: 12px 20px;
   border-color: rgba(127, 136, 151, 0.2) !important;
   background-color: #fff !important;
@@ -2197,7 +2196,7 @@ body {
   position: absolute;
   top: 0;
   left: 3px;
-  font-size: 1.1rem;
+  font-size: 0.8rem;
   color: #fff;
   transition: all 0.3s;
   font-family: FontAwesome,sans-serif;
@@ -2458,14 +2457,14 @@ body {
 }
 
 .icon-element {
-  color: #3cf991;
+  color: #2bab1c;
   font-size: 4rem;
   position: relative;
   width: 80px;
   height: 80px;
   line-height: 85px;
   border-radius: 50%;
-  background-color: rgba(126, 60, 249, 0.1);
+  background-color: #a6f3c154;
   text-align: center;
   transition: all 0.4s;
 }
@@ -2499,7 +2498,7 @@ body {
 
 .text-btn {
   text-transform: capitalize;
-  color: #3cf991;
+  color: #2bab1c;
   font-weight: 500;
   transition: all 0.4s;
 }
@@ -3039,7 +3038,7 @@ body {
   font-size: 4rem;
   font-weight: 600;
   margin-bottom: 10px;
-  color: #3cf991;
+  color: #2bab1c;
 }
 
 .counter-item .count__meta {
@@ -3349,7 +3348,7 @@ body {
   height: auto;
   width: 100%;
   line-height: inherit;
-  padding: 1rem 2rem 1rem 4.5rem;
+  padding: 10px 20px 10px 45px;
   font-size: 1.4rem;
   color: #233d63;
   border-color: rgba(127, 136, 151, 0.2);
@@ -3387,9 +3386,9 @@ body {
 
 .contact-form-action .form-group .input-icon {
   position: absolute;
-  top: 1.3rem;
-  left: 1.3rem;
-  font-size: 1.5rem;
+  top: 1rem;
+  left: 1rem;
+  font-size: 1.3rem;
 }
 
 .contact-form-action .form-group .search-close-icon,
@@ -3411,7 +3410,7 @@ body {
 
 .contact-form-action .form-group .search-icon {
   color: #233d63;
-  padding: 1.5rem;
+  padding: 0.7rem;
   top: 50%;
   transform: translateY(-50%) rotate(-90deg);
   cursor: pointer;
@@ -3432,7 +3431,7 @@ body {
 }
 
 .contact-form-action .form-group .subscriber-btn:hover {
-  background-color: #3cf991;
+  background-color: #2bab1c;
   color: #fff;
 }
 
@@ -5027,7 +5026,7 @@ body {
 }
 
 .legend__bg-1 {
-  background-color: #3cf991;
+  background-color: #2bab1c;
 }
 
 .legend__bg-2 {
@@ -5167,7 +5166,7 @@ body {
   left: 20px;
   font-family: "FontAwesome";
   color: #7f8897;
-  font-size: 1.4rem;
+  font-size: 1.3rem;
 }
 
 /*======= course-photo-btn ========*/
@@ -6635,7 +6634,7 @@ body {
 .cart-body .item__price {
   color: #233d63;
   font-weight: 700;
-  font-size: 1.4rem;
+  font-size: 1.3rem;
 }
 
 .cart-body .input-number-group .input-number-decrement {
@@ -6815,7 +6814,7 @@ body {
 }
 
 .checkout-item .widget-title {
-  font-size: 1.4rem;
+  font-size: 1.3rem;
   font-weight: 600;
 }
 
@@ -7880,7 +7879,7 @@ body {
 }
 
 .header-widget2 .header-right-info .my-content-dropdown .cart-info p {
-  font-size: 1.4rem;
+  font-size: 1.3rem;
   font-weight: 700;
   padding-bottom: 10px;
   color: #233d63;
@@ -9647,7 +9646,7 @@ body {
   border-radius: 50%;
   background-color: rgba(81, 190, 120, 0.1);
   color: #51be78;
-  font-size: 1.4rem;
+  font-size: 1.3rem;
   outline: none !important;
   transition: all 0.3s;
 }
@@ -9850,7 +9849,7 @@ body {
 }
 
 .user-action-item .widget-title {
-  font-size: 1.4rem;
+  font-size: 1.3rem;
 }
 
 .user-action-item .widget-title a {
@@ -10808,7 +10807,7 @@ body {
 }
 
 .skill .widget-title {
-  font-size: 1.4rem;
+  font-size: 1.3rem;
 }
 
 .skill span {
@@ -10907,7 +10906,7 @@ body {
 }
 
 .skillbar-bar-2 {
-  background-color: #3cf991;
+  background-color: #2bab1c;
 }
 
 .skillbar-bar-3 {
@@ -12580,7 +12579,7 @@ body {
   border: none;
   color: #233d63;
   text-decoration: none;
-  font-size: 1.4rem;
+  font-size: 1.3rem;
   position: relative;
   font-weight: 600;
 }
@@ -14154,7 +14153,7 @@ body {
 
 .lecture-viewer-content-detail .list-items li {
   padding-left: 0;
-  font-size: 1.4rem;
+  font-size: 1.3rem;
   line-height: 32px;
   margin-bottom: 12px;
 }

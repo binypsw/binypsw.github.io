@@ -446,7 +446,6 @@
     }
   }
   .dropdown-toggle {
-    font-size: $default-font;
     padding: 12px 20px;
     border-color: rgba(127, 136, 151, 0.2) !important;
     background-color: $white !important;
@@ -866,7 +865,7 @@
     position: absolute;
     top: 0;
     left: 3px;
-    font-size: $default-font-4;
+    font-size: $default-font-6;
     color: $white;
     @include transition(0.3s);
     font-family: FontAwesome,sans-serif;
