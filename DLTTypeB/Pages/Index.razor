@@ -1,0 +1,72 @@
+﻿@page "/"
+@inject NavigationManager _nvgMan;
+
+<div class="position-fixed d-md-none" style="width: 100%; height: 169px; top:-40px; left: 0; background-image: url('image/head.png'); background-repeat: round;"></div>
+<div class="d-flex d-md-none mt-2">
+    <img src="image/picture.png" class="d-block mb-3 mr-3" />
+    <div class="d-flex flex-column align-items-start">
+        <div class="d-block">สวัสดี! ตอนเช้า</div>
+        <div class="d-block" style="font-weight:700;">เจ้าหน้าที่ สมศักดิ์ มีทรัพย์</div>
+    </div>
+</div>
+<div class="d-block d-md-none">
+    <img src="image/scan.png" class="mt-5 py-5 d-block" style="margin: auto;" />
+    <button type="button" class="col-12 col-md-2 btn-primary mb-3 mb-md-1" style="height: 3rem" @onclick="ScanQRCode">สแกนป้ายภาษี</button>
+    <h5 Class="d-block" Style="color:red; text-align: center;">สแกนป้ายภาษี เพื่อตรวจสอบ</h5>
+</div>
+<div class="d-block d-md-none">
+    <div class="menu-footer footer-fixed mx-md-2" style="height: 86px;"></div>
+    <div class="menu-footer footer-fixed bg-transparent px-50" style="box-shadow: none;">
+        <div class="d-flex flex-row justify-content-around align-items-center">
+            <div class="mt-1">
+                <div class="d-flex flex-column justify-content-end align-items-center cursor-pointer" style="width: 73px;">
+                    <img src="image/home-active.png" title="หน้าแรก" style="width: 46px; height: 30px; object-fit: contain;" />
+                    <span class="font-sm-2 text-nowrap" data-i18n="1">หน้าแรก</span>
+                </div>
+            </div>
+            <div class="mt-1">
+                <div class="d-flex flex-column justify-content-end align-items-center cursor-pointer" style="width: 73px;" @onclick="GotoList">
+                    <img src="image/list.png" title="รายการ" style="width: 23px; height: 30px; object-fit: contain;" />
+                    <span class="font-sm-2" data-i18n="2">รายการ</span>
+                </div>
+            </div>
+            <div class="mt-1">
+                <div class="d-flex flex-column justify-content-end align-items-center cursor-pointer" style="width: 73px;" @onclick="GotoProfile">
+                    <img src="image/profile.png" title="บัญชี" style="width: 45px; height: 30px; object-fit: contain;" />
+                    <span class="font-sm-2 text-nowrap" data-i18n="3">บัญชี</span>
+                </div>
+            </div>
+            <div class="mt-1">
+                <div class="d-flex flex-column justify-content-end align-items-center cursor-pointer" style="width: 73px;" @onclick="GotoMenu">
+                    <img src="image/menu.png" title="เมนู" style="width: 25px; height: 30px; object-fit: contain;" />
+                    <span class="font-sm-2" data-i18n="4">เมนู</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@code {
+    public void GotoList()
+    {
+        _nvgMan.NavigateTo("list");
+    }
+
+    public void GotoProfile()
+    {
+        _nvgMan.NavigateTo("profile");
+
+    }
+
+    public void GotoMenu()
+    {
+        _nvgMan.NavigateTo("menu");
+
+    }
+
+    public void ScanQRCode()
+    {
+        _nvgMan.NavigateTo("qrcode");
+
+    }
+}

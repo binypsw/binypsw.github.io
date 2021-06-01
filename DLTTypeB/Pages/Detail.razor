@@ -1,0 +1,163 @@
+﻿@page "/detail"
+@inject NavigationManager _nvgMan;
+
+<div class="w-100 position-absolute overflow-hidden" style="top: 0px; left: 0px; z-index: 1000;">
+    <div class="back-bar d-flex justify-content-center align-items-center">
+        <span class="oi oi-arrow-left" aria-hidden="true" style="padding-bottom: 10px;" @onclick="GotoQRCodePass"></span>
+        <span class="flex-grow-1 pl-25 font-md-5 text-bold-700 text-center" style="padding-bottom: 4px;">ข้อมูลเพิ่มเติม</span>
+    </div>
+</div>
+
+<div class="card mt-5 overflow-auto">
+    <div class="card-body" style="font-size: 0.8rem;">
+        <h5 style="font-weight: 700;">รายการจดทะเบียน</h5>
+        <div class="d-flex justify-content-between">
+            <div>วันที่จดทะเบียน</div>
+            <div style="font-weight: 700;">2 เมษายน 2547</div>
+        </div>
+        <div class="d-flex justify-content-between">
+            <div>เลขทะเบียน</div>
+            <div style="font-weight: 700;">ขต 5542</div>
+        </div>
+        <div class="d-flex justify-content-between">
+            <div>จังหวัด</div>
+            <div style="font-weight: 700;">เชียงใหม่</div>
+        </div>
+        <div class="d-flex justify-content-between">
+            <div>ประเภท</div>
+            <div style="font-weight: 700;">รถยนต์นั่งส่วนบุคคลไม่เกิน 7 คน</div>
+        </div>
+        <div class="d-flex justify-content-between">
+            <div>(รย.1)ลักษณะ</div>
+            <div style="font-weight: 700;">เก๋งตอนเดียว</div>
+        </div>
+        <div class="d-flex justify-content-between">
+            <div>ยี่ห้อรถ</div>
+            <div style="font-weight: 700;">Honda</div>
+        </div>
+        <div class="d-flex justify-content-between">
+            <div>แบบ</div>
+            <div style="font-weight: 700;">MRHGM6620GP104988</div>
+        </div>
+        <div class="d-flex justify-content-between">
+            <div>รุ่นปีค.ศ.</div>
+            <div style="font-weight: 700;">2012</div>
+        </div>
+        <div class="d-flex justify-content-between">
+            <div>สี</div>
+            <div style="font-weight: 700;">ดำ</div>
+        </div>
+        <div class="d-flex justify-content-between">
+            <div>เลขตัวถัง</div>
+            <div style="font-weight: 700;">ABCDE-12345</div>
+        </div>
+        <div class="d-flex justify-content-between">
+            <div>อยู่ที่</div>
+            <div style="font-weight: 700;">ใต้ที่นั่งขวา</div>
+        </div>
+        <div class="d-flex justify-content-between">
+            <div>เชื้อเพลิง</div>
+            <div style="font-weight: 700;">เบนซิน</div>
+        </div>
+        <div class="d-flex justify-content-between">
+            <div>เลขถังแก๊ส</div>
+            <div style="font-weight: 700;">12345</div>
+        </div>
+        <div class="d-flex justify-content-between">
+            <div>จำนวน</div>
+            <div style="font-weight: 700;">4 สูบ 1796 ซีซี</div>
+        </div>
+        <div class="d-flex justify-content-between">
+            <div>แรงม้า</div>
+            <div style="font-weight: 700;">2 เพลา 4ล้อ ยาง 4 เส้น</div>
+        </div>
+        <div class="d-flex justify-content-between">
+            <div>น้ำหนักรถ</div>
+            <div style="font-weight: 700;">1400 กก.</div>
+        </div>
+        <div class="d-flex justify-content-between">
+            <div>น้ำหนักบรรทุก</div>
+            <div style="font-weight: 700;">950 กก.</div>
+        </div>
+        <div class="d-flex justify-content-between">
+            <div>น้ำหนักรวม</div>
+            <div style="font-weight: 700;">2350 กก.</div>
+        </div>
+        <div class="d-flex justify-content-between">
+            <div>ที่นั่ง</div>
+            <div style="font-weight: 700;">2 คน</div>
+        </div>
+    </div>
+</div>
+
+<div class="card mt-3 mb-3">
+    <div class="card-body" style="font-size: 0.8rem;">
+        <h5 style="font-weight: 700;">เจ้าของรถ</h5>
+        <div class="d-flex justify-content-between">
+            <div>ลำดับ</div>
+            <div style="font-weight: 700;">3</div>
+        </div>
+        <div class="d-flex justify-content-between">
+            <div>วันที่ครอบครองรถ</div>
+            <div style="font-weight: 700;">3 สิงหาคม 2558</div>
+        </div>
+        <div class="d-flex justify-content-between">
+            <div>เลขที่บัตร</div>
+            <div style="font-weight: 700;">0107536001401</div>
+        </div>
+        <div class="d-flex justify-content-between">
+            <div>วันเกิด</div>
+            <div style="font-weight: 700;">3 สิงหาคม 2558</div>
+        </div>
+        <div class="d-flex justify-content-between">
+            <div>สัญชาติ</div>
+            <div style="font-weight: 700;">ไทย</div>
+        </div>
+        <div class="d-flex justify-content-between">
+            <div style="width:100px">ที่อยู่</div>
+            <div style="font-weight: 700; text-align: end;">111 ซ.เพชรเกษม 2 แขวงบางแค เขตบางแค กรุงเทพมหานคร</div>
+        </div>
+        <div class="d-flex justify-content-between">
+            <div>ผู้ครอบครอง</div>
+            <div style="font-weight: 700;">MRHGM6620GP104988</div>
+        </div>
+        <div class="d-flex justify-content-between">
+            <div>เลขที่บัตร</div>
+            <div style="font-weight: 700;">2012</div>
+        </div>
+        <div class="d-flex justify-content-between">
+            <div>วันเกิด</div>
+            <div style="font-weight: 700;">3 มีนาคม 2536</div>
+        </div>
+        <div class="d-flex justify-content-between">
+            <div>สัญชาติ</div>
+            <div style="font-weight: 700;">ไทย</div>
+        </div>
+        <div class="d-flex justify-content-between">
+            <div style="width:100px">ที่อยู่</div>
+            <div style="font-weight: 700; text-align: end;">111 ซ.เพชรเกษม 2 แขวงบางแค เขตบางแค กรุงเทพมหานคร</div>
+        </div><div class="d-flex justify-content-between">
+            <div>สัญญาเช่าซื้อเลขที่</div>
+            <div style="font-weight: 700;">123456789</div>
+        </div>
+        <div class="d-flex justify-content-between">
+            <div>ลงวันที่</div>
+            <div style="font-weight: 700;">3 สิงหาคม 2558</div>
+        </div>
+    </div>
+</div>
+
+<button type="button" class="col-12 col-md-2 btn-primary mb-3" style="height: 3rem" @onclick="GotoHome">กลับหน้าหลัก</button>
+
+
+@code {
+    public void GotoQRCodePass()
+    {
+        _nvgMan.NavigateTo("qrcodepass");
+    }
+
+    public void GotoHome()
+    {
+        _nvgMan.NavigateTo("/");
+    }
+}

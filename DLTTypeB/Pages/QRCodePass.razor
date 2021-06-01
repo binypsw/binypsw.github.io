@@ -1,0 +1,34 @@
+﻿@page "/qrcodepass"
+@inject NavigationManager _nvgMan;
+
+<div class="w-100 position-absolute overflow-hidden" style="top: 0px; left: 0px; z-index: 1000;">
+    <div class="back-bar d-flex justify-content-center align-items-center">
+        <span class="oi oi-arrow-left" aria-hidden="true" style="padding-bottom: 10px;" @onclick="GotoScanQRCode"></span>
+        <span class="flex-grow-1 pl-25 font-md-5 text-bold-700 text-center" style="padding-bottom: 4px;">ยืนยันป้ายภาษี</span>
+    </div>
+</div>
+
+<img src="image/confirm.png" class="d-block mt-5 mb-3" style="font-size: 114px; margin: auto;" />
+<h4 Class="d-block text-success text-center" Style="font-weight:700;">สแกนป้ายภาษีสำเร็จ</h4>
+<h5 Class="d-block text-success text-center">โปรดตรวจสอบข้อมูลว่าตรงกัน</h5>
+<img src="image/card.png" class="py-2 d-block w-100" />
+<button type="submit" class="col-12 col-md-2 btn-primary mb-3 mb-md-1" style="height: 3rem" @onclick="GotoDetail">ดูข้อมูลเพิ่มเติม</button>
+<button type="button" class="col-12 col-md-2 btn-secondary mb-md-1" style="height: 3rem" @onclick="GotoHome">กลับหน้าหลัก</button>
+
+
+@code {
+    public void GotoScanQRCode()
+    {
+        _nvgMan.NavigateTo("qrcode");
+    }
+
+    public void GotoDetail()
+    {
+        _nvgMan.NavigateTo("detail");
+    }
+
+    public void GotoHome()
+    {
+        _nvgMan.NavigateTo("/");
+    }
+}

@@ -1,0 +1,29 @@
+﻿@page "/qrcodefail"
+@inject NavigationManager _nvgMan;
+
+<div class="w-100 position-absolute overflow-hidden" style="top: 0px; left: 0px; z-index: 1000;">
+    <div class="back-bar d-flex justify-content-center align-items-center">
+        <span class="oi oi-arrow-left" aria-hidden="true" style="padding-bottom: 10px;" @onclick="GotoScanQRCode"></span>
+        <span class="flex-grow-1 pl-25 font-md-5 text-bold-700 text-center" style="padding-bottom: 4px;">ยืนยันป้ายภาษี</span>
+    </div>
+</div>
+
+<img src="image/cancel.png" class="d-block mt-5 mb-3" style="font-size: 114px; color:red; margin: auto;" />
+<h4 Class="d-block" Style="font-weight:700; color:red; text-align: center;">สแกนป้ายภาษีไม่สำเร็จ</h4>
+<h5 Class="d-block" Style="color:red; text-align: center;">โปรดสแกนอีกครั้ง</h5>
+<img src="image/scan.png" class="py-5 d-block" style="margin: auto;" />
+<button type="submit" class="col-12 col-md-2 btn-primary mb-3 mb-md-1" style="height: 3rem" @onclick="GotoScanQRCode">สแกนใหม่อีกครั้ง</button>
+<button type="button" class="col-12 col-md-2 btn-secondary mb-md-1" style="height: 3rem" @onclick="GotoHome">กลับหน้าหลัก</button>
+
+
+@code {
+    public void GotoScanQRCode()
+    {
+        _nvgMan.NavigateTo("qrcode");
+    }
+
+    public void GotoHome()
+    {
+        _nvgMan.NavigateTo("/");
+    }
+}
