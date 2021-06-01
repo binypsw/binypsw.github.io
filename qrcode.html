@@ -48,10 +48,15 @@
             .catch(err => {
                 window.location = "/qrcodefail.html";
             });
+
+            setTimeout(resizeWebcam, 1000);
             
+        });
+
+        function resizeWebcam() {
             var live = document.getElementById('qr-reader');
             live.style.width = '310px';
-        });
+        }
 
         function docReady(fn) {
             // see if DOM is already available
