@@ -40,7 +40,11 @@
                 qrbox: 250  // Optional if you want bounded box UI
             },
             qrCodeMessage => {
-                window.location = "/qrcodepass.html";
+                if (qrCodeMessage === 'pass') {
+                    window.location = "/qrcodepass.html";
+                } else {
+                    window.location = "/qrcodefail.html";
+                }
             },
             errorMessage => {
                 //resultContainer.innerText = 'ไม่พบ QR Code';
