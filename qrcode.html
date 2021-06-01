@@ -12,14 +12,14 @@
 <body>
     <div class="page">
         <div class="main">
-            <div class="content px-4">
+            <div class="content px-2">
                 <div class="w-100 position-absolute overflow-hidden" style="top: 0px; left: 0px; z-index: 1000;">
                     <div class="back-bar d-flex justify-content-center align-items-center">
                         <span class="oi oi-arrow-left" aria-hidden="true" style="padding-bottom: 10px;" onclick="GotoHome()"></span>
                         <span class="flex-grow-1 pl-25 font-md-5 text-bold-700 text-center" style="padding-bottom: 4px;">สแกนป้ายภาษี</span>
                     </div>
                 </div>
-                <div id="qr-reader" class="mt-5" width="100%" height="310px"></div>
+                <div id="qr-reader" class="mt-5 mb-2" width="100%"></div>
                 <div id="qr-reader-results" class="w-100 text-center"></div>
                 <p class="my-5 text-center" onclick="GotoQRCodeFail()">ผู้ใช้สามารถสแกน QR Code ของป้ายภาษีเพื่อดูข้อมูล</p>
                 <button type="button" class="col-12 col-md-2 btn-secondary mb-md-1" style="height: 3rem" onclick="GotoHome()">กลับหน้าหลัก</button>
@@ -36,8 +36,8 @@
             html5QrCode.start(
             { facingMode: "environment" }, 
             {
-                fps: 10,    // Optional frame per seconds for qr code scanning
-                qrbox: 250  // Optional if you want bounded box UI
+                fps: 120,    // Optional frame per seconds for qr code scanning
+                qrbox: 230  // Optional if you want bounded box UI
             },
             qrCodeMessage => {
                 if (qrCodeMessage === 'pass') {
@@ -47,14 +47,14 @@
                 }
             },
             errorMessage => {
+                var qrShaded = document.getElementById('qr-shaded-region');
+                qrShaded.style.marginTop = '10px';
                 //resultContainer.innerText = 'ไม่พบ QR Code';
             })
             .catch(err => {
                 window.location = "/qrcodefail.html";
             });
 
-            //setTimeout(resizeWebcam, 1000);
-            
         });
 
         // function resizeWebcam() {
