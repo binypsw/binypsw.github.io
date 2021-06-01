@@ -30,7 +30,7 @@
     <script src="/content/js/html5-qrcode.min.js"></script>
     <script>
         docReady(function () {
-            //var resultContainer = document.getElementById('qr-reader-results');
+            var resultContainer = document.getElementById('qr-reader-results');
 
             const html5QrCode = new Html5Qrcode('qr-reader');
             html5QrCode.start(
@@ -43,12 +43,12 @@
                 if (qrCodeMessage === 'pass') {
                     window.location = "/qrcodepass.html";
                 } else {
-                    window.location = "/qrcodefail.html";
+                    resultContainer.innerText = 'QR Code ไม่ถูกต้อง';
+                    //window.location = "/qrcodefail.html";
                 }
             },
             errorMessage => {
-                var qrShaded = document.getElementById('qr-shaded-region');
-                qrShaded.style.marginTop = '10px';
+                resultContainer.innerText = '';
                 //resultContainer.innerText = 'ไม่พบ QR Code';
             })
             .catch(err => {
@@ -56,13 +56,6 @@
             });
 
         });
-
-        // function resizeWebcam() {
-        //     var live = document.getElementById('qr-reader');
-        //     live.style.width = '310px';
-        //     var video = document.getElementsByTagName('video');
-        //     video.style.width = '310px';
-        // }
 
         function docReady(fn) {
             // see if DOM is already available
