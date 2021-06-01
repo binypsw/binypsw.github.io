@@ -32,32 +32,23 @@
         docReady(function () {
             //var resultContainer = document.getElementById('qr-reader-results');
 
-            // This method will trigger user permissions
-            Html5Qrcode.getCameras().then(devices => {
-  
-            if (devices && devices.length) {
-                var cameraId = devices[0].id;
-                const html5QrCode = new Html5Qrcode('qr-reader');
-                html5QrCode.start(
-                cameraId, 
-                {
-                    fps: 10,    // Optional frame per seconds for qr code scanning
-                    qrbox: 250  // Optional if you want bounded box UI
-                },
-                qrCodeMessage => {
-                    window.location = "/qrcodepass.html";
-                },
-                errorMessage => {
-                    //resultContainer.innerText = 'ไม่พบ QR Code';
-                })
-                .catch(err => {
-                    window.location = "/qrcodefail.html";
-                });
-            }
-            }).catch(err => {
+            const html5QrCode = new Html5Qrcode('qr-reader');
+            html5QrCode.start(
+            { facingMode: "environment" }, 
+            {
+                fps: 10,    // Optional frame per seconds for qr code scanning
+                qrbox: 250  // Optional if you want bounded box UI
+            },
+            qrCodeMessage => {
+                window.location = "/qrcodepass.html";
+            },
+            errorMessage => {
+                //resultContainer.innerText = 'ไม่พบ QR Code';
+            })
+            .catch(err => {
                 window.location = "/qrcodefail.html";
             });
-
+            
             var live = document.getElementById('qr-reader');
             live.style.width = '310px';
         });
