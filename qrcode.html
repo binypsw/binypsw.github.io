@@ -19,7 +19,7 @@
                         <span class="flex-grow-1 pl-25 font-md-5 text-bold-700 text-center" style="padding-bottom: 4px;">สแกนป้ายภาษี</span>
                     </div>
                 </div>
-                <div id="qr-reader" class="mt-5" style="width:500px"></div>
+                <div id="qr-reader" class="mt-5" width="100%" height="310px"></div>
                 <div id="qr-reader-results" class="w-100 text-center"></div>
                 <p class="my-5 text-center" onclick="GotoQRCodeFail()">ผู้ใช้สามารถสแกน QR Code ของป้ายภาษีเพื่อดูข้อมูล</p>
                 <button type="button" class="col-12 col-md-2 btn-secondary mb-md-1" style="height: 3rem" onclick="GotoHome()">กลับหน้าหลัก</button>
@@ -49,14 +49,16 @@
                 window.location = "/qrcodefail.html";
             });
 
-            setTimeout(resizeWebcam, 1000);
+            //setTimeout(resizeWebcam, 1000);
             
         });
 
-        function resizeWebcam() {
-            var live = document.getElementById('qr-reader');
-            live.style.width = '310px';
-        }
+        // function resizeWebcam() {
+        //     var live = document.getElementById('qr-reader');
+        //     live.style.width = '310px';
+        //     var video = document.getElementsByTagName('video');
+        //     video.style.width = '310px';
+        // }
 
         function docReady(fn) {
             // see if DOM is already available
