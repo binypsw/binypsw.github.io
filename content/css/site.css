@@ -1,0 +1,109 @@
+@import url('open-iconic/font/css/open-iconic-bootstrap.min.css');
+
+@font-face {
+    font-family: 'fc_iconic_regular';
+    src: url('font/fc_iconic_regular-webfont.woff2') format('woff2'), url('font/fc_iconic_regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'fc_iconic_bold';
+    src: url('font/fc_iconic_bold-webfont.woff2') format('woff2'), url('font/fc_iconic_bold-webfont.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+}
+
+html, body {
+    font-family: 'fc_iconic_regular', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 30px;
+    height: 100%;
+    letter-spacing: 0.06rem !important;
+    background-color: #F9F9FE;
+}
+
+@media (max-width: 575.98px) {
+    html, body {
+        font-size: 20px;
+    }
+}
+
+button {
+    letter-spacing: 0.06rem !important;
+}
+
+a, .btn-link {
+    color: #0366d6;
+}
+
+.btn-primary {
+    color: #fff;
+    background: linear-gradient(107.87deg, #5F00D9 0.94%, #9E00FF 98%);
+    border: 2px solid;
+    border-color: #9901FC;
+    border-radius: 8px;
+    font-weight: 700;
+}
+
+.btn-secondary {
+    color: #9901FC;
+    background-color: transparent;
+    border: 2px solid;
+    border-color: #9901FC;
+    border-radius: 8px;
+    font-weight: 700;
+}
+
+.content {
+    padding-top: 1.1rem;
+}
+
+.valid.modified:not([type=checkbox]) {
+    outline: 1px solid #26b050;
+}
+
+.invalid {
+    outline: 1px solid red;
+}
+
+.validation-message {
+    color: red;
+}
+
+#blazor-error-ui {
+    background: lightyellow;
+    bottom: 0;
+    box-shadow: 0 -1px 2px rgba(0, 0, 0, 0.2);
+    display: none;
+    left: 0;
+    padding: 0.6rem 1.25rem 0.7rem 1.25rem;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+
+#blazor-error-ui .dismiss {
+    cursor: pointer;
+    position: absolute;
+    right: 0.75rem;
+    top: 0.5rem;
+}
+
+@media (max-width: 575.98px) {
+    .footer-fixed {
+        /*display: none;*/
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        padding: 10px 20px;
+        left: 0;
+        background-color: #FFFFFF;
+        z-index: 10;
+        box-shadow: 0px 4px 20px rgb(0 0 0 / 27%);
+    }
+}
+
+.back-bar {
+    position: relative;
+    padding: 1.2rem;
+}

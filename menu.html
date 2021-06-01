@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DLTTypeB</title>
+    <base href="~/" />
+    <link href="/content/css/bootstrap/bootstrap.min.css" rel="stylesheet" />
+    <link href="/content/css/site.css" rel="stylesheet" />
+    <link href="/content/css/page.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="page">
+        <div class="main">
+            <div class="content px-4">
+                <div class="w-100 position-absolute overflow-hidden" style="top: 0px; left: 0px; z-index: 1000;">
+                    <div class="back-bar d-flex justify-content-center align-items-center">
+                        <span class="flex-grow-1 pl-25 font-md-5 text-bold-700 text-center" style="padding-bottom: 4px;">เมนู</span>
+                    </div>
+                </div>
+                
+                <div class="d-block">
+                    <div class="menu-footer footer-fixed mx-md-2" style="height: 86px;"></div>
+                    <div class="menu-footer footer-fixed bg-transparent px-50" style="box-shadow: none;">
+                        <div class="d-flex flex-row justify-content-around align-items-center">
+                            <div class="mt-1">
+                                <div class="d-flex flex-column justify-content-end align-items-center cursor-pointer" style="width: 73px;" onclick="GotoHome()">
+                                    <img src="/content/image/home.png" title="หน้าแรก" style="width: 46px; height: 30px; object-fit: contain;" />
+                                    <span class="font-sm-2 text-nowrap" data-i18n="1">หน้าแรก</span>
+                                </div>
+                            </div>
+                            <div class="mt-1">
+                                <div class="d-flex flex-column justify-content-end align-items-center cursor-pointer" style="width: 73px;" onclick="GotoList()">
+                                    <img src="/content/image/list.png" title="รายการ" style="width: 23px; height: 30px; object-fit: contain;" />
+                                    <span class="font-sm-2" data-i18n="2">รายการ</span>
+                                </div>
+                            </div>
+                            <div class="mt-1">
+                                <div class="d-flex flex-column justify-content-end align-items-center cursor-pointer" style="width: 73px;" onclick="GotoProfile()">
+                                    <img src="/content/image/profile.png" title="บัญชี" style="width: 45px; height: 30px; object-fit: contain;" />
+                                    <span class="font-sm-2 text-nowrap" data-i18n="3">บัญชี</span>
+                                </div>
+                            </div>
+                            <div class="mt-1">
+                                <div class="d-flex flex-column justify-content-end align-items-center cursor-pointer" style="width: 73px;">
+                                    <img src="/content/image/menu-active.png" title="เมนู" style="width: 25px; height: 30px; object-fit: contain;" />
+                                    <span class="font-sm-2" data-i18n="4">เมนู</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+
+        function GotoHome() {
+            window.location = "/index.html";
+        }
+
+        function GotoProfile() {
+            window.location = "/profile.html";
+        }
+
+        function GotoList() {
+            window.location = "/list.html";
+        }
+    </script>
+</body>
+</html>
