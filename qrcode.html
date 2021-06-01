@@ -34,7 +34,9 @@
 
             const html5QrCode = new Html5Qrcode('qr-reader');
             html5QrCode.start(
-            { facingMode: "environment" }, 
+            { 
+                facingMode: "environment" 
+            }, 
             {
                 fps: 120,    // Optional frame per seconds for qr code scanning
                 qrbox: 250  // Optional if you want bounded box UI
