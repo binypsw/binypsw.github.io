@@ -36,6 +36,10 @@ a, .btn-link {
     color: #0366d6;
 }
 
+.text-bold-700 {
+    font-weight: 700;
+}
+
 .btn-primary {
     color: #fff;
     background: linear-gradient(107.87deg, #5F00D9 0.94%, #9E00FF 98%);
