@@ -107,3 +107,28 @@ a, .btn-link {
     position: relative;
     padding: 1.2rem;
 }
+
+.hilight-grad, .bg-hilight-grad {
+    background : -webkit-linear-gradient(353.77deg, #5F00D9 1.8%, #9E00FF 116.34%) !important;
+    background :         linear-gradient(96.23deg, #5F00D9 1.8%, #9E00FF 116.34%) !important;
+}
+
+.badge-circle {
+    display : -webkit-box;
+    display : -webkit-flex;
+    display : -ms-flexbox;
+    display :         flex;
+    -webkit-box-align : center;
+    -webkit-align-items : center;
+    -ms-flex-align : center;
+            align-items : center;
+    -webkit-box-pack : center;
+    -webkit-justify-content : center;
+    -ms-flex-pack : center;
+            justify-content : center;
+    color : #FFFFFF;
+    background-color : #01236F;
+    border-radius : 50%;
+    height : 36px;
+    width : 36px;
+  }
