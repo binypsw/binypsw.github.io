@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DLTTypeB</title>
+    <base href="~/" />
+    <link href="/content/css/bootstrap/bootstrap.min.css" rel="stylesheet" />
+    <link href="/content/css/site.css" rel="stylesheet" />
+    <link href="/content/css/page.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="page">
+        <div class="main">
+            <div class="content px-2">
+                <div class="position-fixed d-md-none" style="width: 100%; height: 169px; top:-40px; left: 0; background-image: url('/content/image/bg.png'); background-repeat: round;"></div>
+                <div class="w-100 position-absolute overflow-hidden px-2" style="top: 0px; left: 0px; z-index: 1000;">
+                    <div class="back-bar d-flex justify-content-center align-items-center">
+                        <span class="oi oi-arrow-left" aria-hidden="true" style="padding-bottom: 10px;" onclick="GotoHome()"></span>
+                        <span class="flex-grow-1 pl-25 font-md-5 text-bold-700 text-center" style="padding-bottom: 4px;">สแกนป้ายภาษี</span>
+                    </div>
+                </div>
+                <video id="qr-video"></video>
+                <div id="cam-qr-result" class="w-100 text-center"></div>
+                <div class="px-2">
+                    <p class="my-5 text-center">ผู้ใช้สามารถสแกน QR Code ของป้ายภาษีเพื่อดูข้อมูล</p>
+                    <button type="button" class="col-12 col-md-2 btn-secondary mb-3" style="height: 3rem" onclick="GotoHome()">กลับหน้าหลัก</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script  type="module">
+        import QrScanner from "/content/js/qr-scanner.js";
+        QrScanner.WORKER_PATH = "/content/js/worker.js";
+
+        const camQrResult = document.getElementById('cam-qr-result');
+
+        const video = document.getElementById('qr-video');
+
+        function setResult(label, result) {
+            label.textContent = result;
+            label.style.color = 'teal';
+            clearTimeout(label.highlightTimeout);
+            label.highlightTimeout = setTimeout(() => label.style.color = 'inherit', 100);
+        }
+
+        const scanner = new QrScanner(video, result => setResult(camQrResult, result), error => {
+            camQrResult.textContent = error;
+            camQrResult.style.color = 'inherit';
+        });
+        
+        scanner.start();
+
+        function GotoHome() {
+            window.location = "/index.html";
+        }
+    </script>
+</body>
+</html>
